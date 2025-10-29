@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI blog generator</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style>
+      @-webkit-keyframes rotate {
+        from {
+          -webkit-transform: rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      @-webkit-keyframes rotate {
+        from {
+          -webkit-transform: rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      .load {
+        width: 100px;
+        height: 100px;
+        margin: 110px auto 0;
+        border: solid 10px rgb(42, 42, 246);
+        border-radius: 50%;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        -webkit-transition: all 0.5s ease;
+        -webkit-animation-name: rotate;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+      }
+    </style>
   </head>
   <body class="flex flex-col min-h-screen bg-gray-100 font-sans antialised">
     <!--Navbar-->
@@ -61,7 +95,11 @@
       </div>
 
       <!-- Section pour le cercle de loading -->
-      <section></section>
+      <div>
+        <div id="loadingCricle" class="load">
+          <div></div>
+        </div>
+      </div>
 
       <!-- Le contenu généré de l'article de blog apparaîtra ici -->
       <section
