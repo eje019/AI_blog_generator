@@ -20,11 +20,11 @@
     <!-- Partie principale -->
     <div class="flex-grow container mx-auto mt-10 px-4 sm:px-0">
       <div
-        class="max-w-3xl bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex flex"
+        class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 flex flex"
       >
         <!-- Section Introduction -->
         <div class="text-center">
-          <h2 class="text-1xl font-semibold m-6">
+          <h2 class="text-2xl font-semibold mb-4">
             Bienvenu sur notre plateforme de génération de blogs par IA !
           </h2>
           <p class="text-gray-700">
@@ -35,6 +35,47 @@
           </p>
         </div>
       </div>
+
+      <br />
+
+      <!-- Section Lien YouTube -->
+
+      <div>
+        <h2 class="text-xl mb-4 font-semibold">
+          Entrez le lien de la video Youtube
+        </h2>
+        <div class="flex space-x-4">
+          <input
+            id="youtubeLink"
+            type="url"
+            placeholder="Collez le lien Youtube"
+            class="flex-grow p-2 border border-blue-400 rounded-l-md"
+          />
+          <button
+            id="generateBlogButton"
+            class="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition-colors"
+          >
+            Générer l'article
+          </button>
+        </div>
+      </div>
+
+      <!-- Section pour le cercle de loading -->
+      <section></section>
+
+      <!-- Le contenu généré de l'article de blog apparaîtra ici -->
+      <section
+        class="mt-10 flex-grow max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 flex flex"
+      >
+        <h2 class="text-xl mb-4 font-semibold">Article de blog généré</h2>
+        <div id="blogContent" class="mt-2 text-gray-700 space-y-4"></div>
+      </section>
     </div>
+
+    <footer>
+      <div class="bg-blue-800 text-white text-center p-4 mt-10">
+        &copy; 2024 IA Generatrice de blogs. Tous droits réservés.
+      </div>
+    </footer>
   </body>
 </html>
